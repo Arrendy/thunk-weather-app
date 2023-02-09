@@ -56,13 +56,13 @@ app.get('/search', (req, res) => {
   });
 
 
-const weatherApiKey = '7871668586efd0a7797494c778e548ac';
+const weatherApiKey = 'xxx';
 app.get('/weather', (req, res) => {
   const {all} = req.query
   const theSplit = all.split(":")
 
   const search_API_URL = 
-    `https://api.openweathermap.org/data/2.5/weather?lat=${theSplit[0]}&lon=${theSplit[1]}&appid=7871668586efd0a7797494c778e548ac`;
+    `https://api.openweathermap.org/data/2.5/weather?lat=${theSplit[0]}&lon=${theSplit[1]}&appid=${weatherApiKey}`;
   console.log(search_API_URL)
 
   axios.get(search_API_URL)
